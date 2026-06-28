@@ -53,3 +53,21 @@ It manages:
 ## Author
 
 **Tirumalesh Chippala**
+
+## Project Features
+
+- Database Schema Design
+- Sample Data
+- SQL Queries
+- SQL Views
+- Reports
+- ER Diagram
+
+## Future Improvements
+
+- Book Search
+- Return Book Feature
+- Fine Calculation
+- User Authentication
+- Web Interface
+- 
