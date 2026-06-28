@@ -54,3 +54,29 @@ FROM Books;
 
 SELECT COUNT(*) AS TotalMembers
 FROM Members;
+-- Find overdue books
+
+SELECT Members.member_name,
+       Books.title,
+       Loans.due_date
+FROM Loans
+JOIN Members ON Loans.member_id = Members.member_id
+JOIN Books ON Loans.book_id = Books.book_id
+WHERE Loans.return_date IS NULL;
+
+-- Count books by author
+
+SELECT Authors.author_name,
+       COUNT(Books.book_id) AS TotalBooks
+FROM Authors
+JOIN Books ON Authors.author_id = Books.author_id
+GROUP BY Authors.author_name;
+
+-- Find all borrowed books
+
+SELECT Books.title,
+       Members.member_name
+FROM Loans
+JOIN Books ON Loans.book_id = Books.book_id
+JOIN Members ON Loans.member_id = Members.member_id;
+
