@@ -3,9 +3,9 @@
 -- ===========================================
 
 CREATE TABLE Authors (
-    author_id INTEGER PRIMARY KEY,
+    author_id INTEGER PRIMARY KEY
     author_name VARCHAR(100) NOT NULL
-);
+)
 
 CREATE TABLE Books (
     book_id INTEGER PRIMARY KEY,
