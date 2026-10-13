@@ -53,12 +53,12 @@ FROM Books;
 -- 7. Count total members
 
 SELECT COUNT(*) AS TotalMembers
-FROM Members;
+FROM Members
 -- Find overdue books
 
 SELECT Members.member_name,
        Books.title,
-       Loans.due_date
+       Loansdue_date
 FROM Loans
 JOIN Members ON Loans.member_id = Members.member_id
 JOIN Books ON Loans.book_id = Books.book_id
